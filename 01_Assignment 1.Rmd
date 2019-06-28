@@ -1,0 +1,26 @@
+---
+title: "Developing Data Product Assignment 1"
+author: "DatSci007"
+date: "June 28, 2019"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+This map shows the birthplace of R in Auckland using the *leaflet* package.
+
+## Plotting Map
+
+
+```{r Leaflet2, echo=TRUE}
+library(leaflet)
+library(tidyverse)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m  # Print the map
+
+
+```
+
